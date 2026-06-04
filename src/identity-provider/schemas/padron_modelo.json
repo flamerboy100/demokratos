@@ -1,0 +1,29 @@
+{
+  "padron_metadata": {
+    "id_padron": "PADRON-NAL-2026",
+    "descripcion": "Padrón Criptográfico de Prueba - DEMOKRATOS",
+    "algoritmo_hash": "SHA-256",
+    "total_votantes_registrados": 4,
+    "raiz_merkle_oficial": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "ejemplo_hojas_arbol": [
+    {
+      "posicion": 0,
+      "descripcion_auditoria": "Votante 1 - Mesa 01",
+      "hash_biometrico_identidad": "8f3c95e8756c7d12f342674e2d31a56bc741a6b738918234e45c719efcf67a2f",
+      "estado_autorizado": true
+    },
+    {
+      "posicion": 1,
+      "descripcion_auditoria": "Votante 2 - Mesa 01",
+      "hash_biometrico_identidad": "4e71a6b738918234e45c719efcf67a2f8f3c95e8756c7d12f342674e2d31a56b",
+      "estado_autorizado": true
+    },
+    {
+      "posicion": 2,
+      "descripcion_auditoria": "Votante 3 - Mesa 02",
+      "hash_biometrico_identidad": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+      "estado_autorizado": false
+    }
+  ]
+}
