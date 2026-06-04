@@ -1,0 +1,43 @@
+{
+  "eleccion_metadata": {
+    "id_unico_eleccion": "ELEC-NAL-PRES-2026-01",
+    "nombre_evento": "Elecciones Presidenciales Generales DEMOKRATOS",
+    "fecha_apertura_utc": "2026-10-25T07:00:00Z",
+    "fecha_cierre_utc": "2026-10-25T17:00:00Z",
+    "nivel_seguridad_kernel": "BIOMETRICA_ESTRICTA_HARDWARE",
+    "version_protocolo": "1.0.0"
+  },
+  "configuracion_cargos": [
+    {
+      "id_cargo": "CARGO-001",
+      "nombre_cargo": "Presidente y Vicepresidente de la República",
+      "votos_permitidos_por_ciudadano": 1,
+      "opciones_planilla": [
+        {
+          "id_opcion": "PLANILLA-10",
+          "nombre_partido": "Frente de la Comunidad Abierta",
+          "candidatos": [
+            {"rol": "Presidente", "nombre": "Dr. Alan Turing"},
+            {"rol": "Vicepresidente", "nombre": "Dra. Ada Lovelace"}
+          ],
+          "logo_visual_sha256": "8f3c95e8756c7d12f342674e2d31a56bc741a6b738918234e45c719efcf67a2f"
+        },
+        {
+          "id_opcion": "PLANILLA-20",
+          "nombre_partido": "Movimiento Cripto Democrático",
+          "candidatos": [
+            {"rol": "Presidente", "nombre": "Ing. Linus Torvalds"},
+            {"rol": "Vicepresidente", "nombre": "Lic. Satoshi Nakamoto"}
+          ],
+          "logo_visual_sha256": "4e71a6b738918234e45c719efcf67a2f8f3c95e8756c7d12f342674e2d31a56b"
+        },
+        {
+          "id_opcion": "VOTO-BLANCO",
+          "nombre_partido": "Voto en Blanco",
+          "candidatos": [],
+          "logo_visual_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    }
+  ]
+}
