@@ -1,0 +1,24 @@
+[package]
+name = "demokratos-node"
+version = "0.1.0"
+edition = "2021"
+authors = ["Comunidad Demokratos <flamerboy100@github>"]
+description = "Nodo descentralizado P2P para la observación y conteo de votos en tiempo real"
+license = "GPL-3.0-only"
+
+[dependencies]
+# Manipulación y lectura de las planillas y padrones JSON creados
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Infraestructura de red distribuida P2P (Estilo Bitcoin/Ethereum)
+libp2p = { version = "0.53", features = ["tcp", "dns", "websocket", "noise", "yamux", "macros"] }
+
+# Criptografía base: Funciones Hash SHA-256 para el Árbol de Merkle
+sha2 = "0.10"
+
+# Criptografía avanzada: Pruebas de Conocimiento Cero (ZKP) para anonimato del voto
+bellman = "0.14"
+
+# Entorno asíncrono para manejar miles de conexiones de nodos simultáneas
+tokio = { version = "1.35", features = ["full"] }
