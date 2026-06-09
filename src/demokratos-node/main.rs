@@ -94,3 +94,5 @@ fn main() {
         }
     }
 }
+mod merkle;
+use hex;
