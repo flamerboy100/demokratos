@@ -9,7 +9,7 @@ on:
 
 jobs:
   build_and_test:
-    name: Compilación Automatizada Segura
+    name: Compilación y Auditoría de Seguridad Automatizada
     runs-on: ubuntu-latest
 
     steps:
@@ -17,15 +17,26 @@ jobs:
     - name: Descargar Código del Repositorio
       uses: actions/checkout@v4
 
-    # 2. Instalar el compilador oficial de Rust más estable
+    # 2. Instalamos el compilador oficial de Rust más estable
     - name: Configurar Entorno de Rust
       uses: actions-rust-lang/setup-rust-toolchain@v1
       with:
         toolchain: stable
 
-    # 3. Moverse a la carpeta del nodo y compilar verificando el Cargo.toml
-    - name: Validar y Compilar Dependencias Criptográficas y P2P
+    # 3. Moverse a la carpeta del nodo y validar la sintaxis del código
+    - name: Validar Dependencias Criptográficas y P2P
       run: |
         cd src/demokratos-node
         cargo check
+
+    # 4. Compilar los binarios del nodo en modo de desarrollo
+    - name: Compilar Nodo de Votación
+      run: |
+        cd src/demokratos-node
         cargo build --verbose
+
+    # 5. EJECUTAR PRUEBAS: Obliga al sistema a validar que los ataques simulados sean rechazados
+    - name: Ejecutar Pruebas Automatizadas contra Fraude Electoral
+      run: |
+        cd src/demokratos-node
+        cargo test --verbose
