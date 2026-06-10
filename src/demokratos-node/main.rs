@@ -2,6 +2,8 @@
 // Procesamiento de elecciones y simulación de transacciones de votación criptográfica
 
 mod merkle;
+#[cfg(test)]
+mod tests;
 use serde::{Deserialize, Serialize};
 use std::fs::File;
 use std::io::Read;
